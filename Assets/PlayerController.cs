@@ -7,12 +7,18 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed = 5.0f; // Скорость движения персонажа
 
     private CharacterController controller;
+    private Rigidbody rb;
+    public float jumpforce;
+    private bool isground;
     
     private void Start()
     {
         controller = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        rb = GetComponent<Rigidbody>();
+        jumpforce = 10f;
+        isground = true;
     }
 
     private void Update()
@@ -29,5 +35,14 @@ public class PlayerController : MonoBehaviour
         
         // Двигаем персонажа
         controller.Move(moveDirection * moveSpeed * Time.deltaTime);
+        isground = Physics.Raycast(transform.position, Vector3.down, 1.1f);
+        if (Input.GetKeyDown(KeyCode.Space) && isground)
+        {
+            jump();
+        }
+
+    }   
+    private void jump(){
+        rb.AddForce(Vector3.up*jumpforce,ForceMode.Impulse);
     }
 }
