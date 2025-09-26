@@ -37,7 +37,7 @@ public class fogscript : MonoBehaviour
             }
         }
     }
-    
+
     void Update()
     {
         if (player == null) return;
