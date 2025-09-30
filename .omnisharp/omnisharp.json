@@ -1,0 +1,14 @@
+{
+    "transport": "stdio",
+    "port": 56591,
+    "MsBuild": {
+        "UseLegacySdkResolver": true,
+        "MSBuildExtensionsPath": ""
+    },
+    "RoslynExtensionsOptions": {
+        "enableAnalyzersSupport": false
+    },
+    "FormattingOptions": {
+        "enableEditorConfigSupport": false
+    }
+}

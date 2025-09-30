@@ -3,6 +3,7 @@ using System.Collections;
 
 public class fogscript : MonoBehaviour
 {
+    
     [Header("Настройки преследования")]
     public float moveSpeed = 100f; // Скорость движения врага
     public float detectionRange = 30f; // Радиус обнаружения игрока

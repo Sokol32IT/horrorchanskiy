@@ -9,7 +9,7 @@ public class andreycontroller : MonoBehaviour {
     public float detectionRange = 30f; // Радиус обнаружения игрока
     public float stoppingDistance = 2f; // Дистанция остановки перед игроком
     public float rotationSpeed = 70f; // Скорость поворота
-    
+
     [Header("Настройки видимости")]
     public float fieldOfView = 90f; // Угол обзора врага (в градусах)
     public LayerMask obstacleLayer; // Слой препятствий
